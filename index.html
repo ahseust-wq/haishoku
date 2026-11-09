@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haishoku — Sanzo Wada’s color combinations for Android</title>
+<meta name="description" content="All 348 of Sanzo Wada’s 1933 color combinations, with mockups, color-blind and contrast checks, and a photo lens. For Android.">
+<meta property="og:title" content="Haishoku — Sanzo Wada’s color combinations">
+<meta property="og:description" content="Don’t just browse Wada’s colors. Use them.">
+<meta property="og:image" content="img/icon.png">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECECE6; --card:#F7F7F3; --ink:#22211E; --ink2:#5E5C56; --rule:rgba(34,33,30,.14);
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",Georgia,serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root{--paper:#1B1B19;--card:#252522;--ink:#ECEAE3;--ink2:#AAA79F;--rule:rgba(236,234,227,.14)}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:800;margin:0;line-height:1.15}
+
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.mark{font:800 26px/1 var(--serif);text-decoration:none;display:flex;align-items:baseline;gap:10px}
+.mark span{font:500 14px var(--sans);color:var(--ink2)}
+.play{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:24px;
+  background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700}
+.play svg{width:18px;height:18px}
+header .play{height:40px;padding:0 16px;font-size:15px}
+
+/* hero: the day's plate is the memorable element */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end;padding:48px 0 72px}
+.hero h1{font-size:clamp(40px,6.2vw,72px);letter-spacing:-.01em}
+.hero p{font:500 19px/1.7 var(--serif);color:var(--ink2);max-width:30em;margin:22px 0 30px}
+.today{display:flex;flex-direction:column;gap:14px}
+.today-top{display:flex;justify-content:space-between;align-items:flex-end}
+.today-num{font:800 clamp(64px,9vw,104px)/.85 var(--serif)}
+.today-of{text-align:right;color:var(--ink2);font-size:14px}
+.plate{display:flex;flex-direction:column;height:min(56vh,420px);border-radius:3px;overflow:hidden}
+.plate i{display:block;flex:var(--w) 1 0}
+.names{list-style:none;margin:0;padding:0;font-size:15px}
+.names li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule)}
+.names b{font:700 16px var(--serif)}
+.names code{font:inherit;color:var(--ink2)}
+
+/* features */
+.feature{display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:center;padding:64px 0;border-top:1px solid var(--rule)}
+.feature:nth-of-type(even){grid-template-columns:300px 1fr}
+.feature:nth-of-type(even) .shot{order:-1}
+.feature h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:16px}
+.feature p{color:var(--ink2);max-width:32em;margin:0}
+.shot{width:100%;height:auto;border-radius:22px;box-shadow:0 1px 0 var(--rule),0 18px 40px rgba(0,0,0,.12)}
+
+.about{padding:72px 0;border-top:1px solid var(--rule)}
+.about h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:18px}
+.about p{font:500 18px/1.8 var(--serif);max-width:36em;color:var(--ink2)}
+.cta{text-align:center;padding:72px 0 88px;border-top:1px solid var(--rule)}
+.cta h2{font-size:clamp(30px,4vw,46px);margin-bottom:24px}
+
+footer{border-top:1px solid var(--rule);padding:28px 0 40px;font-size:14px;color:var(--ink2)}
+footer nav{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:36px;padding:24px 0 48px}
+  .feature,.feature:nth-of-type(even){grid-template-columns:1fr;gap:28px;padding:48px 0}
+  .feature:nth-of-type(even) .shot{order:0}
+  .shot{max-width:280px}
+  header .play span{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="mark" href="./">配色<span>Haishoku</span></a>
+    <a class="play" href="https://play.google.com/store/apps/details?id=com.seus.haishoku">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.5v19l17-9.5z"/></svg><span>Get it on Google Play</span></a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Sanzo Wada’s 348 color combinations, put to work</h1>
+      <p>In 1933 the painter Sanzo Wada published one of Japan’s first systematic studies of color harmony. Haishoku turns it into a tool you can design with: preview, check and export every combination on your phone.</p>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.seus.haishoku">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.5v19l17-9.5z"/></svg>Get it on Google Play</a>
+    </div>
+    <div class="today" id="today" aria-live="polite"></div>
+  </section>
+
+  <section class="feature">
+    <div><h2>See it as a poster, a textile, an app</h2>
+      <p>Every combination opens in a Studio that shows it in real use: a poster, a seigaiha wave pattern, an app screen, a type specimen and a chart. Tap to swap which color plays which role.</p></div>
+    <img class="shot" src="img/studio.webp" width="600" height="1000" alt="Studio showing combination 256 as a poster" loading="lazy">
+  </section>
+
+  <section class="feature">
+    <div><h2>Check it before you commit</h2>
+      <p>Preview each combination as people with protanopia, deuteranopia or tritanopia see it, or in grayscale. A WCAG contrast table rates every pair for body and large text.</p></div>
+    <img class="shot" src="img/vision.webp" width="600" height="1000" alt="Combination 187 under deuteranopia simulation" loading="lazy">
+  </section>
+
+  <section class="feature">
+    <div><h2>Find Wada’s colors in your photos</h2>
+      <p>Lens matches the colors of any photo to Wada’s 159 and shows which of his combinations are already in the scene. Touch a spot to sample it. Your photo never leaves your phone.</p></div>
+    <img class="shot" src="img/lens.webp" width="600" height="1000" alt="Lens matching a dusk landscape to Wada colors" loading="lazy">
+  </section>
+
+  <section class="feature">
+    <div><h2>Train your eye</h2>
+      <p>One color is hidden from a real combination. Can you pick the one Wada chose? A short history, practical tips and a daily combination round out the app.</p></div>
+    <img class="shot" src="img/quiz.webp" width="600" height="1000" alt="The missing-color game" loading="lazy">
+  </section>
+
+  <section class="about">
+    <h2>About Sanzo Wada</h2>
+    <p>Wada Sanzō (1883–1967) was a painter, printmaker and costume designer. He founded the Japan Standard Color Association in 1927, published the six-volume <i>Haishoku Sōkan</i> in 1933–34, and won an Academy Award for the costumes of <i>Gate of Hell</i>. His combinations still shape how designers think about color.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Free on Android</h2>
+    <a class="play" href="https://play.google.com/store/apps/details?id=com.seus.haishoku">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.5v19l17-9.5z"/></svg>Get it on Google Play</a>
+  </section>
+
+  <footer>
+    <nav><a href="privacy.html">Privacy policy</a><a href="mailto:REPLACE@EMAIL">Contact</a></nav>
+    <p>Haishoku is an independent study companion, not affiliated with Seigensha or the Japan Color Research Institute. Color data adapted from Matt DesLauriers’ open dataset (MIT license). Google Play is a trademark of Google LLC.</p>
+    <p>© 2026 Ahsen Serkan Usta</p>
+  </footer>
+</div>
+
+<script src="wada-data.js"></script>
+<script>
+/* Today's combination — same day-seeded choice as the app. */
+(() => {
+  const cols = window.WADA || []; const combos = {};
+  cols.forEach((c, i) => c[5].forEach(k => (combos[k] = combos[k] || []).push(i)));
+  const ids = Object.keys(combos).map(Number).sort((a, b) => a - b);
+  if (!ids.length) return;
+  const d = new Date(), day = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5);
+  let x = (day * 2654435761) >>> 0; x ^= x >>> 15; x = Math.imul(x, 2246822519) >>> 0; x = (x ^ (x >>> 13)) >>> 0;
+  const n = ids[x % ids.length], cs = combos[n].map(i => cols[i]);
+  const w = { 2: [62, 38], 3: [50, 30, 20], 4: [40, 25, 20, 15] }[cs.length];
+  const esc = s => s.replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  document.getElementById('today').innerHTML =
+    `<div class="today-top"><div class="today-num">${n}</div><div class="today-of">Today’s combination<br>${cs.length} of Wada’s colors</div></div>
+     <div class="plate" role="img" aria-label="Combination ${n}: ${esc(cs.map(c => c[0]).join(', '))}">${cs.map((c, i) => `<i style="background:${c[1]};--w:${w[i]}"></i>`).join('')}</div>
+     <ul class="names">${cs.map(c => `<li><b>${esc(c[0])}</b><code>${c[1]}</code></li>`).join('')}</ul>`;
+})();
+</script>
+</body>
+</html>
