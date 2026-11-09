@@ -1,0 +1,8 @@
+<en-US>
+First release.
+• All 348 of Sanzo Wada's combinations and 159 colors
+• Studio: see each combination as a poster, textile, app screen and chart
+• Color-blind previews and WCAG contrast checks
+• Lens: find Wada's colors in your photos
+• A daily combination and the "Which color is missing?" game
+</en-US>

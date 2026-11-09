@@ -1,0 +1,31 @@
+Don't just browse Sanzo Wada's colors. Use them.
+
+In 1933 the Japanese painter and color researcher Sanzo Wada published Haishoku Soukan, one of the first systematic studies of color combinations in Japan. Haishoku turns his 348 combinations and 159 colors into a working design tool.
+
+SEE IT IN USE
+Every combination comes with a Studio: preview it as a poster, a seigaiha wave textile, an app screen, a typographic specimen and a chart. Tap to swap which color plays which role.
+
+CHECK IT BEFORE YOU COMMIT
+• Color-blind preview: protanopia, deuteranopia, tritanopia and grayscale
+• WCAG contrast ratio for every pair, with body-text and large-text ratings
+• A short reading of each combination: value range, warm and cool balance, and which color to use sparingly
+
+FIND WADA IN THE WORLD
+Lens matches the colors of any photo to Wada's set and shows which of his combinations are already in the scene. Touch the photo to sample a single color. Your photo stays on your phone.
+
+EXPLORE THE ATLAS
+• Filter by pairs, trios and quartets, by hue family, by color name, number or HEX
+• Every color with HEX, RGB, the book's CMYK and CIELAB, plus its nearest neighbors
+• A new combination every day
+• Save favorites to your own collection, no account needed
+
+LEARN AS YOU GO
+A short history of Wada and his work, practical tips for using a combination well, and a game: one color is hidden from a real combination. Can you pick the one Wada chose?
+
+EXPORT
+Copy combinations as CSS variables, JSON, Tailwind config or SVG, or share them as an image (Pro).
+
+HAISHOKU PRO
+One purchase removes ads and unlocks code export and image sharing. Everything else is free.
+
+Haishoku is an independent study companion. It is not affiliated with Seigensha, the publisher of A Dictionary of Color Combinations, or with the Japan Color Research Institute. Color data adapted from Matt DesLauriers' open dataset (MIT license).
